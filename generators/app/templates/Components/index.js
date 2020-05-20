@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react'
 import Element from 'Olio/App/Components/<%= componentName %>/<%= componentName %>'
-import mapStateToProps from './mapStateToProps'
+import mapStateToProps from 'Olio/App/Components/<%= componentName %>/mapStateToProps'
 import connect from 'Olio/App/Utils/connect'
 
 type Props = {
