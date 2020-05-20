@@ -2,7 +2,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import <%= componentName %> from 'Olio/App/Components/<%= componentName %>/<%= componentName %>'
-import { Label } from 'Olio/App/Components/<%= componentName %>/styles'
+import { Container } from 'Olio/App/Components/<%= componentName %>/styles'
 
 describe('<<%= componentName %> />', () => {
   let _props
@@ -13,8 +13,9 @@ describe('<<%= componentName %> />', () => {
     _wrapper = shallow(<<%= componentName %> {..._props} />)
   })
 
-  it('renders a <Label />', () => {
-    expect(_wrapper.type()).toEqual(Label)
+  it('renders a <Container />', () => {
+    expect(_wrapper.type()).toEqual(Container)
+    fail('Epic fail')
   })
 
 })

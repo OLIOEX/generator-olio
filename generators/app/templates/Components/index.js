@@ -6,7 +6,7 @@ import connect from 'Olio/App/Utils/connect'
 
 type Props = {
   id: number,
-};
+}
 
 export class <%= componentName %> extends React.PureComponent<Props> {
 

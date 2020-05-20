@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react'
-import { Label } from './styles'
+import { Container } from 'Olio/App/Components/<%= componentName %>/styles'
 
 type Props = {}
 
@@ -8,7 +8,7 @@ export class <%= componentName %> extends React.PureComponent<Props> {
 
   render() {
     return (
-      <Label></Label>
+      <Container></Container>
     )
   }
 

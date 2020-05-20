@@ -22,6 +22,7 @@ describe('<<%= sceneName %>>', () => {
 
   it('passes down the props', () => {
     expect(_wrapper.prop('id')).toEqual(id)
+    fail('Epic fail')
   })
 
 })

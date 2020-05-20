@@ -11,7 +11,7 @@ describe('<<%= componentName %>>', () => {
 
   beforeEach(() => {
     _props = {
-      id
+      id,
     }
     _wrapper = shallow(<<%= componentName %> {..._props} />)
   })
@@ -22,6 +22,7 @@ describe('<<%= componentName %>>', () => {
 
   it('passes down the props', () => {
     expect(_wrapper.prop('id')).toEqual(id)
+    fail('Epic fail')
   })
 
 })

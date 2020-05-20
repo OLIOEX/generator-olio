@@ -11,5 +11,6 @@ describe('<<%= componentName %> /> mapStateToProps', () => {
 
     const props = mapStateToProps(state, {})
     expect(props).toEqual({})
+    fail('Epic fail')
   })
 })

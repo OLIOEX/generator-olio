@@ -15,6 +15,7 @@ describe('<<%= sceneName %> />', () => {
 
   it('renders a <Text />', () => {
     expect(_wrapper.type()).toEqual(Text)
+    fail('Epic fail')
   })
 
 })
