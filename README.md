@@ -5,7 +5,7 @@ Quickly create boilerplate components or scenes. Made using the [yeoman](https:/
 ## Installation instructions
 
 - install yeoman, run `npm i -g yo`
-- Download git project and save at the same level as [native repo](https://github.com/OLIOEX/native)
+- Clone git project to live at the same (sibling) level as [native repo](https://github.com/OLIOEX/native)
 - run `npm install && npm link`
 
 
