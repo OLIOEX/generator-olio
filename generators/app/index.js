@@ -70,8 +70,8 @@ module.exports = class extends Generator {
           },
         },
         {
-          templatePath: 'tests/Components/index.js',
-          destinationPath: `../native/tests/App/Components/${this.answers.componentName}/index.js`,
+          templatePath: 'tests/unit/Components/index.js',
+          destinationPath: `../native/tests/unit/App/Components/${this.answers.componentName}/index.js`,
           data: {
             componentName: this.answers.componentName,
           },
@@ -84,8 +84,8 @@ module.exports = class extends Generator {
           },
         },
         {
-          templatePath: 'tests/Components/mapStateToProps.js',
-          destinationPath: `../native/tests/App/Components/${this.answers.componentName}/mapStateToProps.js`,
+          templatePath: 'tests/unit/Components/mapStateToProps.js',
+          destinationPath: `../native/tests/unit/App/Components/${this.answers.componentName}/mapStateToProps.js`,
           data: {
             componentName: this.answers.componentName,
           },
@@ -98,8 +98,8 @@ module.exports = class extends Generator {
           },
         },
         {
-          templatePath: `tests/Components/Element.js`,
-          destinationPath: `../native/tests/App/Components/${this.answers.componentName}/${this.answers.componentName}.js`,
+          templatePath: `tests/unit/Components/Element.js`,
+          destinationPath: `../native/tests/unit/App/Components/${this.answers.componentName}/${this.answers.componentName}.js`,
           data: {
             componentName: this.answers.componentName,
           },
@@ -135,8 +135,8 @@ module.exports = class extends Generator {
           },
         },
         {
-          templatePath: 'tests/Scenes/index.js',
-          destinationPath: `../native/tests/App/Scenes/${this.answers.sceneName}/index.js`,
+          templatePath: 'tests/unit/Scenes/index.js',
+          destinationPath: `../native/tests/unit/App/Scenes/${this.answers.sceneName}/index.js`,
           data: {
             sceneName: this.answers.sceneName,
           },
@@ -149,8 +149,8 @@ module.exports = class extends Generator {
           },
         },
         {
-          templatePath: `tests/Scenes/Element.js`,
-          destinationPath: `../native/tests/App/Scenes/${this.answers.sceneName}/${this.answers.sceneName}.js`,
+          templatePath: `tests/unit/Scenes/Element.js`,
+          destinationPath: `../native/tests/unit/App/Scenes/${this.answers.sceneName}/${this.answers.sceneName}.js`,
           data: {
             sceneName: this.answers.sceneName,
           },
