@@ -4,10 +4,10 @@ var yosay = require('yosay')
 
 const CLASS_COMPONENT = 'Class Component'
 const CLASS_SCENE = 'Class Scene'
-const FUNCTIONAL_COMPONENT = 'Functional Component'
-const FUNCTIONAL_SCENE = 'Functional Scene'
+const FUNCTION_COMPONENT = 'Function Component'
+const FUNCTION_SCENE = 'Function Scene'
 const CLASS_COMPONENT_TYPE = 'class'
-const FUNCTIONAL_COMPONENT_TYPE = 'functional'
+const FUNCTION_COMPONENT_TYPE = 'functional'
 
 module.exports = class extends Generator {
   async prompting() {
@@ -18,15 +18,15 @@ module.exports = class extends Generator {
     this.element = await this.prompt([
       {
         type: 'list',
-        choices: [FUNCTIONAL_COMPONENT, FUNCTIONAL_SCENE, CLASS_COMPONENT, CLASS_SCENE],
-        default: FUNCTIONAL_COMPONENT,
+        choices: [FUNCTION_COMPONENT, FUNCTION_SCENE, CLASS_COMPONENT, CLASS_SCENE],
+        default: FUNCTION_COMPONENT,
         name: 'type',
         message: 'What type of element would you like to create?',
         required: true,
       },
     ])
 
-    if ([FUNCTIONAL_COMPONENT, CLASS_COMPONENT].includes(this.element.type) === true) {
+    if ([FUNCTION_COMPONENT, CLASS_COMPONENT].includes(this.element.type) === true) {
       this.answers = await this.prompt([
         {
           type: 'input',
@@ -43,7 +43,7 @@ module.exports = class extends Generator {
       ])
     }
 
-    if ([FUNCTIONAL_SCENE, CLASS_SCENE].includes(this.element.type) === true) {
+    if ([FUNCTION_SCENE, CLASS_SCENE].includes(this.element.type) === true) {
       this.answers = await this.prompt([
         {
           type: 'input',
@@ -64,7 +64,7 @@ module.exports = class extends Generator {
   }
 
   createComponent() {
-    if ([FUNCTIONAL_COMPONENT, CLASS_COMPONENT].includes(this.element.type) === true) {
+    if ([FUNCTION_COMPONENT, CLASS_COMPONENT].includes(this.element.type) === true) {
       let elements = [
         {
           templatePath: `Components/${getComponentType(this.element.type)}/index.js`,
@@ -134,7 +134,7 @@ module.exports = class extends Generator {
   }
 
   createScene() {
-    if ([FUNCTIONAL_SCENE, CLASS_SCENE].includes(this.element.type) === true) {
+    if ([FUNCTION_SCENE, CLASS_SCENE].includes(this.element.type) === true) {
       const elements = [
         {
           templatePath: `Scenes/${getComponentType(this.element.type)}/index.js`,
@@ -192,7 +192,7 @@ module.exports = class extends Generator {
 }
 
 const getComponentType = (type) => {
-  let componentType = FUNCTIONAL_COMPONENT_TYPE
+  let componentType = FUNCTION_COMPONENT_TYPE
   if ([CLASS_SCENE, CLASS_COMPONENT].includes(type) === true) {
     componentType = CLASS_COMPONENT_TYPE
   }
