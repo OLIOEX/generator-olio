@@ -114,7 +114,7 @@ module.exports = class extends Generator {
           },
           {
             templatePath: `tests/Components/mapStateToProps.js`,
-            destinationPath: `../native/unit/tests/App/Components/${this.answers.componentName}/mapStateToProps.js`,
+            destinationPath: `../native/tests/unit/App/Components/${this.answers.componentName}/mapStateToProps.js`,
             data: {
               componentName: this.answers.componentName,
             },
