@@ -1,12 +1,20 @@
 // @flow
 import * as React from 'react'
-import { Container } from 'Olio/App/Components/<%= componentName %>/styles'
+import { Container, Text } from 'Olio/App/Components/<%= componentName %>/styles'
 
-type Props = {}
+type Props = {
+  id: number
+}
 
-const <%= componentName %> = ({}: Props): React.Node => {
+export const <%= componentName %> = ({
+  id
+}: Props): React.Node => {
   return (
-    <Container></Container>
+    <Container>
+      <Text>
+        {id}
+      </Text>
+    </Container>
   )
 }
 

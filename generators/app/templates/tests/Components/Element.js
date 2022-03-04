@@ -5,17 +5,17 @@ import <%= componentName %> from 'Olio/App/Components/<%= componentName %>/<%= c
 import { Container } from 'Olio/App/Components/<%= componentName %>/styles'
 
 describe('<<%= componentName %> />', () => {
+  const id = 1
   let _props
   let _wrapper
 
   beforeEach(() => {
-    _props = {}
+    _props = { id }
     _wrapper = shallow(<<%= componentName %> {..._props} />)
   })
 
   it('renders a <Container />', () => {
     expect(_wrapper.type()).toEqual(Container)
-    fail('Epic fail')
   })
 
 })
